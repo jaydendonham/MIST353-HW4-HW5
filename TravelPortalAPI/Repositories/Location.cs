@@ -4,6 +4,7 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
+//Jayden Donham
 namespace TravelPortalAPI.Repositories
 {
     public class Location : ILocation
@@ -14,7 +15,7 @@ namespace TravelPortalAPI.Repositories
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<Location>> spGetLocationDetails(int locationid)
+        public async Task<List<Location>> GetLocationDetails(int locationid)
         {
             var param = new SqlParameter("@LocationID", locationid);
             var LocationDetails = await Task.Run(() => _dbContextClass.Location.FromSqlRaw("exec spGetLocationDetails @CompanyID", param).ToListAsync());
