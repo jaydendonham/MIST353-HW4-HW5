@@ -47,3 +47,4 @@ Page 5 will allow users to make an account or login in order to use the websites
 Page 6 will act similarly to something like Google Maps or MapQuest and show the relevant climate data for a route shown. This page will incorporate the external climate data API to show drivers about historical climate data along their routes or at certain points of interest.
 
 
+## [API Documentation](TravelPortalAPI/README.md)
