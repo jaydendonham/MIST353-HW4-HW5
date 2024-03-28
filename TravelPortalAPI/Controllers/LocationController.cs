@@ -15,9 +15,9 @@ namespace TravelPortalAPI.Controllers
             this.locationservice = location;
         }
         [HttpGet("{locationId}")]
-        public async Task<List<Location>> GetLocationDetails(int locationId)
+        public async Task<List<Location>> GetLocationDetails(int locationid, string state, string city, string zipcode)
         {
-            var LocationDetails = await locationservice.GetLocationDetails(locationId);
+            var LocationDetails = await locationservice.GetLocationDetails(locationid, state, city, zipcode);
             return LocationDetails;
         }
     }

@@ -15,12 +15,12 @@ namespace TravelPortalAPI.Repositories
             _dbContextClass = dbContextClass;
         }
 
-        public async Task<List<Entities.Occupation>> GetOccupationDetails(int occupationid)
+        public async Task<List<Entities.Occupation>> GetOccupationDetails(int occupationid, string position, double wage)
         {
             var param = new SqlParameter("@OccupationID", occupationid);
-
+            
             var occupationDetails = await _dbContextClass.Occupation
-                .FromSqlRaw("EXEC spOccupationDetails @occupationID", param)
+                .FromSqlRaw("EXEC spOccupationDetails @occupationID @position @wage", param)
                 .ToListAsync();
 
             return occupationDetails;

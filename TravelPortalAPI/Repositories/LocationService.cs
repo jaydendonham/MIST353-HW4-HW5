@@ -15,12 +15,12 @@ namespace TravelPortalAPI.Repositories
             _dbContextClass = dbContextClass;
         }
 
-        public async Task<List<Entities.Location>> GetLocationDetails(int locationid)
+        public async Task<List<Entities.Location>> GetLocationDetails(int locationid, string state, string city, string zipcode)
         {
             var param = new SqlParameter("@LocationID", locationid);
 
             var locationDetails = await _dbContextClass.Location
-                .FromSqlRaw("EXEC spLocationDetails @LocationID", param)
+                .FromSqlRaw("EXEC spLocationDetails @locationid @state @city @zipcode", param)
                 .ToListAsync();
 
             return locationDetails;
