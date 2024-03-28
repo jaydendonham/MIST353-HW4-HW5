@@ -19,7 +19,7 @@ private readonly DbContextClass _dbContextClass;
         {
           return await _dbContext.Vehicles.FindAsync(vehicleId);
           } 
-           public async Task<int> AddVehicle(Vehicle vehicle)
+           public async Task<int> AddVehicle(Vehicle vehicle) // Allows add user to add more vehicles/information into the database. 
         {
            
             var vehicleID = new SqlParameter("@VehicleID", vehicle.ID);
