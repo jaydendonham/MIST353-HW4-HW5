@@ -1,5 +1,6 @@
 ﻿using TravelPortalAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using TravelPortalAPI.Entities;
 
 //Jayden Donham
 namespace TravelPortalAPI.Controllers
@@ -8,15 +9,15 @@ namespace TravelPortalAPI.Controllers
     [ApiController]
     public class LocationController : Controller
     {
-        private readonly ILocation locationservice;
-        public LocationController(ILocation location)
+        private readonly ILocationService locationservice;
+        public LocationController(ILocationService location)
         {
-            this.Location = location;
+            this.locationservice = location;
         }
         [HttpGet("{locationId}")]
         public async Task<List<Location>> GetLocationDetails(int locationId)
         {
-            var LocationDetails = await Location.GetLocationDetails(locationId);
+            var LocationDetails = await locationservice.GetLocationDetails(locationId);
             return LocationDetails;
         }
     }

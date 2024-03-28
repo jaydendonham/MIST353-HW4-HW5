@@ -2,24 +2,28 @@
 using TravelPortalAPI.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
 
 //Jayden Donham
 namespace TravelPortalAPI.Repositories
 {
-    public class Location : ILocation
+    public class LocationService : ILocationService
     {
         private readonly DbContextClass _dbContextClass;
-        
-        public Location(DbContextClass dbContextClass)
+
+        public LocationService(DbContextClass dbContextClass)
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<Location>> GetLocationDetails(int locationid)
+
+        public async Task<List<Entities.Location>> GetLocationDetails(int locationid)
         {
             var param = new SqlParameter("@LocationID", locationid);
-            var LocationDetails = await Task.Run(() => _dbContextClass.Location.FromSqlRaw("exec spGetLocationDetails @CompanyID", param).ToListAsync());
-            return LocationDetails;
+
+            var locationDetails = await _dbContextClass.Location
+                .FromSqlRaw("EXEC spLocationDetails @LocationID", param)
+                .ToListAsync();
+
+            return locationDetails;
         }
     }
 }

@@ -5,5 +5,12 @@ namespace TravelPortalAPI.Entities
 {
     public class Occupation
     {
+        public int OID { get; set; }
+
+        [Required]
+        public string Position { get; set; }
+
+        [Required]
+        public double Wage { get; set; }
     }
 }
