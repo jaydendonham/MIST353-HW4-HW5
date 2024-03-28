@@ -18,6 +18,10 @@ namespace TravelPortalAPI.Repositories
 	public async Task<List<Hotel>> POIGetDetails(string poi_state)
 	{
 	var param = new SqlParameter("@poi_state", poi_state);
-	var poiDetails //Finish later
+	var poiDetails = await Task.Run(() => _dbContextClass.POI.FromSqlRaw("exec findPOIByState @poi_state", param).ToListAsync());
+	return poiDetails;
+	}
+
+	//Eventually we can put an add POI method here
     }
 }
