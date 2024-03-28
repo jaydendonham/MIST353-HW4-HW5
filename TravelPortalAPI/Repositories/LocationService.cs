@@ -20,7 +20,7 @@ namespace TravelPortalAPI.Repositories
             var param = new SqlParameter("@LocationID", locationid);
 
             var locationDetails = await _dbContextClass.Location
-                .FromSqlRaw("EXEC spLocationDetails @locationid @state @city @zipcode", param)
+                .FromSqlRaw("EXEC spLocationDetails @locationid, @state, @city, @zipcode", param)
                 .ToListAsync();
 
             return locationDetails;

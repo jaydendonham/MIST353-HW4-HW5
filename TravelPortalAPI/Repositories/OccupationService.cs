@@ -20,7 +20,7 @@ namespace TravelPortalAPI.Repositories
             var param = new SqlParameter("@OccupationID", occupationid);
             
             var occupationDetails = await _dbContextClass.Occupation
-                .FromSqlRaw("EXEC spOccupationDetails @occupationID @position @wage", param)
+                .FromSqlRaw("EXEC spOccupationDetails @occupationid, @position, @wage", param)
                 .ToListAsync();
 
             return occupationDetails;
