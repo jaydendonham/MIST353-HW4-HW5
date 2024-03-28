@@ -1,5 +1,7 @@
-    //Ryan Sladic 
+//Ryan Sladic 
+using System.Threading.Tasks;
 using TravelPortalAPI.Entities;
+
 
 namespace TravelPortalAPI.Repositories
 {
