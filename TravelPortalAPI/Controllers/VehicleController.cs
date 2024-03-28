@@ -8,6 +8,19 @@ namespace TravelPortalAPI.Controllers
         [ApiController]
 public class VehicleController : ControllerBase
 {
+ private readonly IVehicleService _vehicleService;
+
+        public VehiclesController(IVehicleService vehicleService)
+        {
+            _vehicleService = vehicleService;
+        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
+        {
+            var vehicles = await _vehicleService.GetVehiclesAsync();
+            return Ok(vehicles);
+        }
+
     [HttpPost("manufacturer")]
     public IActionResult GetVehiclesByManufacturer([FromBody] ManufacturerInput input)
     {
