@@ -12,7 +12,7 @@ public class VehicleController : ControllerBase
 
         public VehiclesController(IVehicleService vehicleService)
         {
-            _vehicleService = vehicleService;
+            this.vehicleService = vehicleService;
         }
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
@@ -20,7 +20,6 @@ public class VehicleController : ControllerBase
             var vehicles = await _vehicleService.GetVehiclesAsync();
             return Ok(vehicles);
         }
-
     [HttpPost("manufacturer")]
     public IActionResult GetVehiclesByManufacturer([FromBody] ManufacturerInput input)
     {
