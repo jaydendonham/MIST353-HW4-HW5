@@ -17,7 +17,7 @@ public class VehicleController : ControllerBase
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
         {
-            var vehicles = await _vehicleService.GetVehiclesAsync();
+            var vehicles = await _vehicleService.GetVehiclesAsync();// Uses vehicle ID Number to search for vehicle in databse.
             return Ok(vehicles);
         }
     [HttpPost("manufacturer")]
