@@ -1,12 +1,11 @@
 //Ryan Sladic
-
 using System.Threading.Tasks;
 using TravelPortalAPI.Entities;
 
 namespace TravelPortalAPI.Repositories
 {
-    public interface IVehicleService
+    public interface IServiceParts
     {
-        Task<List<Vehicle>> GetVehicleDetails(string make, string model, int year);
+        Task<List<Part>> GetPartDetails(int PNum, string PManu, string PCategory, string PCountry, int? price, string PDescription);
     }
 }
