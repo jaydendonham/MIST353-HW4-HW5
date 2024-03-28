@@ -15,6 +15,7 @@ namespace TravelPortalAPI.Controllers
 	{
 	var driverDetails = await driverService.AddDriver(driver);
 	return driverDetails;
+	}
 
     }
 }
