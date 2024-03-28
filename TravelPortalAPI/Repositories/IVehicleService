@@ -1,10 +1,11 @@
+
 using TravelPortalAPI.Entities;
 
 namespace TravelPortalAPI.Repositories
-{
-    //Ryan Sladic 
-    public interface IVehicleService
     {
-        public Task<List<Vehicle>> GetVehicleDetails(string make, string model, int year);
+        //Ryan Sladic 
+        public interface IVehicleService
+        {
+            public Task<List<Vehicle>> GetVehicleDetails(string make, string model, int year);
+        }
     }
-}
