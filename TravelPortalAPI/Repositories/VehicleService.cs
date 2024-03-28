@@ -3,6 +3,8 @@ using TravelPortalAPI.Entities;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
+//Ryan Sladic
+// Take user inputted vehicle information, (make, model and year) and output all known information about those vehicles. 
 namespace TravelPortalAPI.Repositories
 {
     public class VehicleRepository : IVehicleService
@@ -27,7 +29,7 @@ private readonly DbContextClass _dbContextClass;
             } 
  await _dbContext.Vehicles.AddAsync(vehicle);
             await _dbContext.SaveChangesAsync();
-            return vehicle.Id; 
+            return vehicle.Id; //Returns vehicle ID wth information 
             }
         }
 
