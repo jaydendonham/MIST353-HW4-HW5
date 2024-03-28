@@ -24,7 +24,7 @@ public class VehicleController : ControllerBase
     public IActionResult GetVehiclesByManufacturer([FromBody] ManufacturerInput input)
     {
 
-        var response = $"You requested vehicles manufactured by {input.Manufacturer} manufacturer.";
+        var response = "You requested vehicles manufactured by {input.Manufacturer} manufacturer.";
         return Ok(response);
     }
 }
