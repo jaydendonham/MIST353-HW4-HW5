@@ -15,21 +15,24 @@ namespace TravelPortalAPI.Repositories
 	_dbContextClass = dbContextClass;
 	}
    
-	public async Task<List<Driver>> DriverRetrieveDetails(int did)
-	{
-	var param = new SqlParameter("@did", did);
-	
-	//Add DriverDetails here at some point
-	}
+	//public async Task<List<Driver>> DriverRetrieveDetails(int did)
+	//{
+	//var param = new SqlParameter("@did", did);
+
+	//In-Class Example had a "Find Hotel" function like this
+	//Putting the building blocks here for future implementation of find driver
+	//It'd be kinda useless to add drivers to not be able to find their details
+	//But it's not necessary at this stage in development
+	//}
 
         public async Task<int> AddDriver(Driver driver)
 	{
-	var DPosition = new SqlParameter("@DPosition", driver.Position);
-	var D_First = new SqlParameter("@D_First", driver.First);
-	var D_Last = new SqlParameter("@D_Last", driver.Last);
-	var D_Hometown = new SqlParameter("@D_Hometown", driver.Hometown);
-	var D_LNum = new SqlParameter("@D_LNum", driver.LNum);
-
-	//Add DriverDetails Here At Some Point
+	var dPosition = new SqlParameter("@DPosition", driver.Position);
+	var d_First = new SqlParameter("@D_First", driver.First);
+	var d_Last = new SqlParameter("@D_Last", driver.Last);
+	var d_Hometown = new SqlParameter("@D_Hometown", driver.Hometown);
+	var d_LNum = new SqlParameter("@D_LNum", driver.LNum);
+	var driverDetails = await Task.Run(() => _dbContextClass.Database.ExecuteSqlRaw("exec addDriver @DPosition, @D_First, @D_Last, @D_Hometown, @D_LNum", dPosition, d_First, d_Last, d_Hometown, d_LNum)); 
+	return driverDetails
     }
 }
