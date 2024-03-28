@@ -11,6 +11,13 @@ namespace TravelPortalAPI.Controllers
     public class DriverController : Controller
     {
 
+	private readonly IDriverService driverService;
+	public DriverController(IDriverService driverService)
+	{
+	this.driverService = driverService;
+	}
+
+	[HttpPost]
         public async Task<ActionResult<int>> AddDriver(Driver drive)
 	{
 	var driverDetails = await driverService.AddDriver(driver);
