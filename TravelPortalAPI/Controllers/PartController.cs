@@ -17,7 +17,7 @@ namespace TravelPortalAPI.Controllers
             _partRepository = partRepository;
         }
         [HttpGet("{pNum}")]
-        public async Task<ActionResult<Part>> GetPart(int pNum)
+        public async Task<ActionResult<Part>> GetPart(int pNum) //Takes user inputted number and uses as PART ID to find matches in the system. 
         {
             var part = await _partRepository.GetPartByNumber(pNum);
             if (part == null)
