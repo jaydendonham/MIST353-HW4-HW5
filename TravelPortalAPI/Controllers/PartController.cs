@@ -2,6 +2,8 @@ using TravelPortalAPI.Repositories;
 using TravelPortalAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
 
+//Ryan Sladic
+
 namespace TravelPortalAPI.Controllers
 {
     [ApiController]
