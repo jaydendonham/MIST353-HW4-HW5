@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using TravelPortalAPI.Data;
 using TravelPortalAPI.Entities;
 
+//Ryan Sladic
 namespace TravelPortalAPI.Repositories
 {
     public class PartRepository : IPartRepository
