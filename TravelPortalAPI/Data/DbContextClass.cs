@@ -12,6 +12,6 @@ namespace TravelPortalAPI.Data
         public DbSet<Occupation> Occupation {  get; set; }
         public DbSet<Part> Part { get; set; }
         public DbSet<Vehicle> Vehicle { get; set; }
-	public DBSet<POI> POI { get; set; }
+	public DbSet<POI> POI { get; set; }
     }
 }
