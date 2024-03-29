@@ -83,7 +83,13 @@ Code is written to return the inputs given.
 ## Vehicle
 
 ### What It Does
+Retrieves vehicle information using user inputs.
 
 ### Inputs
+- Make
+- Model
+- Year
 
 ### Outputs
+
+Code is written to return the inputs given.
