@@ -7,7 +7,7 @@ using System.Reflection;
 //Josh Keller
 namespace TravelPortalAPI.Repositories
 {
-    public class POI : IPOI
+    public class POIService : IPOIService
     {
 	private readonly DbContextClass _dbContextClass;
 	public POIService(DbContextClass dbContextClass)
@@ -15,7 +15,7 @@ namespace TravelPortalAPI.Repositories
 		_dbContextClass = dbContextClass;
 	}
 	
-	public async Task<List<Hotel>> POIGetDetails(string poi_state)
+	public async Task<List<POI>> POIGetDetails(string poi_state)
 	{
 	var param = new SqlParameter("@poi_state", poi_state);
 	var poiDetails = await Task.Run(() => _dbContextClass.POI.FromSqlRaw("exec findPOIByState @poi_state", param).ToListAsync());
