@@ -3,9 +3,9 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TravelPortalAPI.Entities
 {
-    public class Driver
+    public class POI
     {
-	public int POI { get; set; }
+	public int POI_ID { get; set; }
 
 	[Required]
 	public string POI_Name { get; set; }
