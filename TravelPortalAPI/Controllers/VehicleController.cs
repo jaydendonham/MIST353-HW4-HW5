@@ -1,30 +1,24 @@
 using TravelPortalAPI.Repositories;
-using TravelPortalAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
+using TravelPortalAPI.Entities;
 
 //Ryan Sladic
 namespace TravelPortalAPI.Controllers
-        [Route("api/[controller]")]
-        [ApiController]
-public class VehicleController : ControllerBase
 {
- private readonly IVehicleService _vehicleService;
-
-        public VehiclesController(IVehicleService vehicleService)
-        {
-            this.vehicleService = vehicleService;
-        }
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
-        {
-            var vehicles = await _vehicleService.GetVehiclesAsync();// Uses vehicle ID Number to search for vehicle in databse.
-            return Ok(vehicles);
-        }
-    [HttpPost("manufacturer")]
-    public IActionResult GetVehiclesByManufacturer([FromBody] ManufacturerInput input)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class VehicleController : Controller
     {
-
-        var response = "You requested vehicles manufactured by {input.Manufacturer} manufacturer.";
-        return Ok(response);
+        private readonly IVehicleService vehicleservice;
+        public VehicleController(IVehicleService vehicle)
+        {
+            this.vehicleservice = vehicle;
+        }
+        [HttpGet("{vehicleId}")]
+        public async Task<List<Vehicle>> GetVehicleDetails(int VIN, string VMake, string VModel, string VYear)
+        {
+            var VehicleDetails = await vehicleservice.GetVehicleDetails(VIN, VMake, VModel, VYear);
+            return VehicleDetails;
+        }
     }
 }
