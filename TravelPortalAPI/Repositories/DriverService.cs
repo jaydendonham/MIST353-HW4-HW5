@@ -12,7 +12,7 @@ namespace TravelPortalAPI.Repositories
 	private readonly DbContextClass _dbContextClass;
 	public DriverService(DbContextClass dbContextClass)
 	{
-	_dbContextClass = dbContextClass;
+		_dbContextClass = dbContextClass;
 	}
    
 	//public async Task<List<Driver>> DriverRetrieveDetails(int did)
@@ -33,6 +33,6 @@ namespace TravelPortalAPI.Repositories
 	var d_Hometown = new SqlParameter("@D_Hometown", driver.D_Hometown);
 	var d_LNum = new SqlParameter("@D_LNum", driver.D_LNum);
 	var driverDetails = await Task.Run(() => _dbContextClass.Database.ExecuteSqlRaw("exec addDriver @DPosition, @D_First, @D_Last, @D_Hometown, @D_LNum", dPosition, d_First, d_Last, d_Hometown, d_LNum)); 
-	return driverDetails
+	return driverDetails;
     }
 }
