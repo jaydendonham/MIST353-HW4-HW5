@@ -1,58 +1,54 @@
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using TravelPortalAPI.Data;
 using TravelPortalAPI.Entities;
-using Microsoft.EntityFrameworkCore;
-
-//Ryan Sladic
-// Search for vehicle parts based on part number, get all parts from system, add parts to part list, remove parts from part lists.
 
 namespace TravelPortalAPI.Repositories
 {
     public class PartRepository : IPartRepository
     {
-        private readonly DbContextClass _dbContext;
+        private readonly DbContext _dbContextClass;
 
-        public PartRepository(DbContextClass dbContext)
+        public PartRepository(DbContext dbContext)
         {
-            _dbContext = dbContext;
+            _dbContextClass = dbContext;
         }
+
         public async Task<Part> GetPartByNumber(int pNum)
         {
-        return await _dbContext.Parts.FindAsync(pNum);
+            return await _dbContextClass.Part.FirstOrDefaultAsync(p => p.PNum == pNum);
         }
+
         public async Task<List<Part>> GetAllParts()
         {
-            return await _dbContext.Parts.ToListAsync();
+            return await _dbContextClass.Part.ToListAsync();
         }
 
         public async Task AddPart(Part part)
         {
-            _dbContext.Parts.Add(part);
-            await _dbContext.SaveChangesAsync();
+            _dbContextClass.Part.Add(part);
+            await _dbContextClass.SaveChangesAsync();
         }
-        
-        public async Task DeletePart(Part part)
-        {
-            var existingPart = await _dbContext.Parts.FindAsync(part.PNum);
 
-            if (existingPart != null)
+        public async Task DeletePart(int pNum)
+        {
+            var partToDelete = await _dbContextClass.Part.FindAsync(pNum);
+            if (partToDelete != null)
             {
-                _dbContext.Parts.Remove(existingPart);
-                await _dbContext.SaveChangesAsync();
+                _dbContextClass.Part.Remove(partToDelete);
+                await _dbContextClass.SaveChangesAsync();
             }
-           else
-    {
-       
-        Console.WriteLine($"{part.PNum} Is not in the part catalog.");
         }
-    
+    }
+
     public interface IPartRepository
     {
         Task<Part> GetPartByNumber(int pNum);
-        
         Task<List<Part>> GetAllParts();
-        
         Task AddPart(Part part);
-        
-        Task DeletePart(Part part); 
+        Task DeletePart(int pNum);
     }
 }
