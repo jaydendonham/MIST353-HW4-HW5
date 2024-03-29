@@ -9,6 +9,7 @@ builder.Services.AddScoped<IDriverService, DriverService>();
 builder.Services.AddScoped<IPOIService, POIService>();
 builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<IOccupationService, OccupationService>();
+builder.Services.AddScoped<IVehicleService, VehicleService>();
 builder.Services.AddDbContext<DbContextClass>();
 
 builder.Services.AddControllers();
