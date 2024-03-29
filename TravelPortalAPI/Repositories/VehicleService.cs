@@ -20,7 +20,7 @@ namespace TravelPortalAPI.Repositories
             var param = new SqlParameter("@VehicleID", VIN);
 
             var vehicleDetails = await _dbContextClass.Vehicle
-                .FromSqlRaw("EXEC spVehicleDetails @vehicleid, @state, @city, @zipcode", param)
+                .FromSqlRaw("EXEC spVehicleDetails @vehicleid, @VMake, @VModel, @VYear", param)
                 .ToListAsync();
 
             return vehicleDetails;
