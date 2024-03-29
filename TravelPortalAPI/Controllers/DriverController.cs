@@ -18,7 +18,7 @@ namespace TravelPortalAPI.Controllers
 	}
 
 	[HttpPost]
-        public async Task<ActionResult<int>> AddDriver(Driver drive)
+        public async Task<ActionResult<int>> AddDriver(Driver driver)
 	{
 	var driverDetails = await driverService.AddDriver(driver);
 	return driverDetails;
