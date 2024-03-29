@@ -27,11 +27,11 @@ namespace TravelPortalAPI.Repositories
 
         public async Task<int> AddDriver(Driver driver)
 	{
-	var dPosition = new SqlParameter("@DPosition", driver.Position);
-	var d_First = new SqlParameter("@D_First", driver.First);
-	var d_Last = new SqlParameter("@D_Last", driver.Last);
-	var d_Hometown = new SqlParameter("@D_Hometown", driver.Hometown);
-	var d_LNum = new SqlParameter("@D_LNum", driver.LNum);
+	var dPosition = new SqlParameter("@DPosition", driver.DPosition);
+	var d_First = new SqlParameter("@D_First", driver.D_First);
+	var d_Last = new SqlParameter("@D_Last", driver.D_Last);
+	var d_Hometown = new SqlParameter("@D_Hometown", driver.D_Hometown);
+	var d_LNum = new SqlParameter("@D_LNum", driver.D_LNum);
 	var driverDetails = await Task.Run(() => _dbContextClass.Database.ExecuteSqlRaw("exec addDriver @DPosition, @D_First, @D_Last, @D_Hometown, @D_LNum", dPosition, d_First, d_Last, d_Hometown, d_LNum)); 
 	return driverDetails
     }
