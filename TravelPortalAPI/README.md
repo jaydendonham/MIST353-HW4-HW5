@@ -1,14 +1,18 @@
 # API Documentation
 
-## API 1
+## Driver
 
 ### What It Does
 
+Adds a driver to the portal-wide database of employees, whether they work for a company or are freelance.
+
 ### Inputs
+
+
 
 ### Outputs
 
-## API 2
+## POI
 
 ### What It Does
 
