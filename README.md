@@ -7,14 +7,14 @@ Following our merger into Electric Elephant Electronics, our group is moving for
 
 The web app currently has six pages planned. The pages are as follows:
 
-| Page No. | Purpose | API Present? | 
-|-----:|-----------|-----------|
-|     1|Home Page|Yes|
-|     2|Driver List|Yes|
-|     3|Adding Location/Jobs|Yes|
-|     4|Manufacturer/Part Library|Yes|
-|     5|Register for Account|No|
-|     6|Map|Yes|
+| Page No. | Purpose | API Present? |  API Used | 
+|-----:|-----------|-----------|-----------|
+|     1|Home Page|Yes| ? |
+|     2|Driver List|Yes| Driver | 
+|     3|Adding Location/Jobs|Yes| Location |
+|     4|Manufacturer/Part Library|Yes| Part & Vehicle |
+|     5|Register for Account|No| N/A |
+|     6|Map|Yes| External Weather API & POI |
 
 #### Page 1
 
