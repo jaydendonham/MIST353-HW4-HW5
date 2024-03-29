@@ -75,11 +75,16 @@ Code is written to return the inputs given.
 ## Part
 
 ### What It Does
-
+Retrieves part information as well as allows user to add/remove parts from the program. 
 ### Inputs
-
+- Part number
 ### Outputs
-
+- Part manufacturer
+- Part category
+- Part country
+- Part price
+- Part description
+  
 ## Vehicle
 
 ### What It Does
