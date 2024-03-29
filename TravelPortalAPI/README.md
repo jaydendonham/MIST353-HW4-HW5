@@ -72,7 +72,7 @@ Gets all occupation details to show the information stored on a job.
 
 Code is written to return the inputs given.
 
-## API 5
+## Part
 
 ### What It Does
 
@@ -80,7 +80,7 @@ Code is written to return the inputs given.
 
 ### Outputs
 
-## API 6
+## Vehicle
 
 ### What It Does
 
