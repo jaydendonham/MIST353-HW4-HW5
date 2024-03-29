@@ -10,6 +10,7 @@ namespace TravelPortalAPI.Repositories
     public class Driver : IDriver
     {
 	private readonly DbContextClass _dbContextClass;
+
 	public DriverService(DbContextClass dbContextClass)
 	{
 		_dbContextClass = dbContextClass;
