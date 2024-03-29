@@ -4,34 +4,26 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 
 //Ryan Sladic
-// Take user inputted vehicle information, (make, model and year) and output all known information about those vehicles. 
 namespace TravelPortalAPI.Repositories
 {
-    public class VehicleRepository : IVehicleService
+    public class VehicleService : IVehicleService
     {
-private readonly DbContextClass _dbContextClass;
+        private readonly DbContextClass _dbContextClass;
+
         public VehicleService(DbContextClass dbContextClass)
         {
             _dbContextClass = dbContextClass;
         }
-        public async Task<List<Vehicle>> VehicleGetDetails(int vehicleid)
-        public async Task<int> AddVehicle(Vehicle vehicle)
+
+        public async Task<List<Entities.Vehicle>> GetVehicleDetails(int VIN, string VMake, string VModel, string VYear)
         {
-          return await _dbContext.Vehicles.FindAsync(vehicleId);
-          } 
-           public async Task<int> AddVehicle(Vehicle vehicle) // Allows add user to add more vehicles/information into the database. 
-        {
-           
-            var vehicleID = new SqlParameter("@VehicleID", vehicle.ID);
-            var vehicleMake = new SqlParameter("@VehicleAddress", vehicle.Make);
-            var vehicleModel = new SqlParameter("@VehicleCity", vehicle.Model);
-            var vehicleYear = new SqlParameter("@VehicleState", vehicle.Year);
-            } 
- await _dbContext.Vehicles.AddAsync(vehicle);
-            await _dbContext.SaveChangesAsync();
-            return vehicle.Id; //Returns vehicle ID wth information 
-            }
+            var param = new SqlParameter("@VehicleID", VIN);
+
+            var vehicleDetails = await _dbContextClass.Vehicle
+                .FromSqlRaw("EXEC spVehicleDetails @vehicleid, @state, @city, @zipcode", param)
+                .ToListAsync();
+
+            return vehicleDetails;
         }
-
-
-
+    }
+}
