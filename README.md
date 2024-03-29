@@ -30,7 +30,7 @@ This will use the API 'Driver'
 
 ### Page 3
 
-Page 3 allows employers to add locations for contract work or postings for jobs to a page viewable by any potential workers or applicants.
+Page 3 allows people to view location details for considering job postings that are available in the area.
 
 This will use the APIs 'Location' and 'Occupation'
 
