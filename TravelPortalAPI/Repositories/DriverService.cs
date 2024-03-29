@@ -12,10 +12,10 @@ namespace TravelPortalAPI.Repositories
 	private readonly DbContextClass _dbContextClass;
 
 	public DriverService(DbContextClass dbContextClass)
-	{
-		_dbContextClass = dbContextClass;
-	}
-   
+        {
+            _dbContextClass = dbContextClass;
+        }
+
 	//public async Task<List<Driver>> DriverRetrieveDetails(int did)
 	//{
 	//var param = new SqlParameter("@did", did);
