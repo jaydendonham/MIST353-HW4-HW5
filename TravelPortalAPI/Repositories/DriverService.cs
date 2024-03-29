@@ -35,5 +35,6 @@ namespace TravelPortalAPI.Repositories
 	var d_LNum = new SqlParameter("@D_LNum", driver.D_LNum);
 	var driverDetails = await Task.Run(() => _dbContextClass.Database.ExecuteSqlRaw("exec addDriver @DPosition, @D_First, @D_Last, @D_Hometown, @D_LNum", dPosition, d_First, d_Last, d_Hometown, d_LNum)); 
 	return driverDetails;
+	}
     }
 }
