@@ -1,37 +1,54 @@
-using TravelPortalAPI.Repositories;
-using TravelPortalAPI.Entities;
 using Microsoft.AspNetCore.Mvc;
-
-//Ryan Sladic
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using TravelPortalAPI.Entities;
+using TravelPortalAPI.Repositories;
 
 namespace TravelPortalAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PartController : ControllerBase
+    public class PartsController : ControllerBase
     {
         private readonly IPartRepository _partRepository;
 
-        public PartController(IPartRepository partRepository)
+        public PartsController(IPartRepository partRepository)
         {
-            _partRepository = partRepository;
+            _partRepository = partRepository ?? throw new ArgumentNullException(nameof(partRepository));
         }
+
         [HttpGet("{pNum}")]
-        public async Task<ActionResult<Part>> GetPart(int pNum) //Takes user inputted number and uses as PART ID to find matches in the system. 
+        public async Task<ActionResult<Part>> GetPartByNumber(int pNum)
         {
             var part = await _partRepository.GetPartByNumber(pNum);
             if (part == null)
             {
                 return NotFound();
-            {
-            return part;
+            }
+            return Ok(part);
         }
 
-        [HttpGet("PartName")] 
-        public async Task<ActionResult<IEnumerable<Part>>> GetAllParts()
+        [HttpGet]
+        public async Task<ActionResult<List<Part>>> GetAllParts()
         {
             var parts = await _partRepository.GetAllParts();
             return Ok(parts);
         }
+
+        [HttpPost]
+        public async Task<ActionResult<Part>> AddPart(Part part)
+        {
+            await _partRepository.AddPart(part);
+            return CreatedAtAction(nameof(GetPartByNumber), new { pNum = part.PNum }, part);
+        }
+
+        [HttpDelete("{pNum}")]
+        public async Task<IActionResult> DeletePart(int pNum)
+        {
+            await _partRepository.DeletePart(pNum);
+            return NoContent();
+        }
     }
 }
+
