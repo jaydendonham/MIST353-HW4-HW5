@@ -17,7 +17,7 @@ namespace TravelPortalAPI.Controllers
 	}
 
 	[HttpGet("{POI_State}")]
-	public async Task<List><POI>> POIRetrieveDetails(string poi_state)
+	public async Task<List<POI>> POIRetrieveDetails(string poi_state)
 	{
 		var poiDetails = await poiService.POIRetrieveDetails(poi_state);
 		//potential if statement here
