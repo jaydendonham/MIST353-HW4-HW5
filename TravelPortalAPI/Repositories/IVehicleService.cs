@@ -7,6 +7,6 @@ namespace TravelPortalAPI.Repositories
 {
     public interface IVehicleService
     {
-        public Task<List<Vehicle>> GetVehicleDetails(string make, string model, int year);
+        public Task<List<Vehicle>> GetVehicleDetails(int VIN, string VMake, string VModel, string VYear);
     }
 }
