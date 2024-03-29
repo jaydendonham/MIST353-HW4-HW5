@@ -8,11 +8,11 @@ Adds a driver to the portal-wide database of employees, whether they work for a 
 
 ### Inputs
 
-DPosition: Position of Driver (ex. Car Hauler)
-D_First: First Name of Driver (ex. John)
-D_Last: Last Name of Driver (ex. Doe)
-D_Hometown: Homeetown of Driver, where they are based (ex. Fairmont)
-D_LNum: Drivers License Number of Driver (ex. A123456789)
+- DPosition: Position of Driver (ex. Car Hauler)
+- D_First: First Name of Driver (ex. John)
+- D_Last: Last Name of Driver (ex. Doe)
+- D_Hometown: Homeetown of Driver, where they are based (ex. Fairmont)
+- D_LNum: Drivers License Number of Driver (ex. A123456789)
 
 
 ### Outputs
@@ -31,12 +31,12 @@ Finds points of interest in a given state
 
 ### Outputs
 
-POI_Name: Name of POI (ex. Washington Monument)
-POI_Add_Num: Address Number of POI (ex. 123)
-POI_Street: POI Street (ex. Conch St.)
-POI_City: City of POI (ex. Morgantown)
-POI_State: State of POI (ex. West Virginia)
-POI_ZIP: ZIP of POI (ex. 12345)
+- POI_Name: Name of POI (ex. Washington Monument)
+- POI_Add_Num: Address Number of POI (ex. 123)
+- POI_Street: POI Street (ex. Conch St.)
+- POI_City: City of POI (ex. Morgantown)
+- POI_State: State of POI (ex. West Virginia)
+- POI_ZIP: ZIP of POI (ex. 12345)
 
 ## API 3
 
