@@ -7,7 +7,7 @@ using System.Reflection;
 //Josh Keller
 namespace TravelPortalAPI.Repositories
 {
-    public class Driver : IDriver
+    public class DriverService : IDriverService
     {
 	private readonly DbContextClass _dbContextClass;
 

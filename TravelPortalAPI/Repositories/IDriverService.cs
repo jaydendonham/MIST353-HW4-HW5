@@ -4,7 +4,7 @@ using TravelPortalAPI.Entities;
 namespace TravelPortalAPI.Repositories
 {
     //Josh Keller
-    public interface IDriver
+    public interface IDriverService
     {
 	//public Task<List<Driver>> DriverRetrieveDetails(int did);
 	//Commented out because there was never a find driver function finished
