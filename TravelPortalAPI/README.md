@@ -38,21 +38,36 @@ Finds points of interest in a given state
 - POI_State: State of POI (ex. West Virginia)
 - POI_ZIP: ZIP of POI (ex. 12345)
 
-## API 3
+## Location
 
 ### What It Does
 
+Gets all location details to show the information stored on a searched area.
+
 ### Inputs
+
+- State
+- City
+- Zipcode
 
 ### Outputs
 
-## API 4
+Code is written to return the inputs given.
+
+## Occupation
 
 ### What It Does
 
+Gets all occupation details to show the information stored on a job.
+
 ### Inputs
 
+- Position
+- Wage
+
 ### Outputs
+
+Code is written to return the inputs given.
 
 ## API 5
 
