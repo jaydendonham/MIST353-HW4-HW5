@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,36 +9,36 @@ namespace TravelPortalAPI.Repositories
 {
     public class PartRepository : IPartRepository
     {
-        private readonly DbContext _dbContextClass;
+        private readonly DbContext _dbContext;
 
         public PartRepository(DbContext dbContext)
         {
-            _dbContextClass = dbContext;
+            _dbContext = dbContext;
         }
 
         public async Task<Part> GetPartByNumber(int pNum)
         {
-            return await _dbContextClass.Part.FirstOrDefaultAsync(p => p.PNum == pNum);
+            return await _dbContext.Set<Part>().FirstOrDefaultAsync(p => p.PNum == pNum);
         }
 
         public async Task<List<Part>> GetAllParts()
         {
-            return await _dbContextClass.Part.ToListAsync();
+            return await _dbContext.Set<Part>().ToListAsync();
         }
 
         public async Task AddPart(Part part)
         {
-            _dbContextClass.Part.Add(part);
-            await _dbContextClass.SaveChangesAsync();
+            _dbContext.Set<Part>().Add(part);
+            await _dbContext.SaveChangesAsync();
         }
 
         public async Task DeletePart(int pNum)
         {
-            var partToDelete = await _dbContextClass.Part.FindAsync(pNum);
+            var partToDelete = await _dbContext.Set<Part>().FindAsync(pNum);
             if (partToDelete != null)
             {
-                _dbContextClass.Part.Remove(partToDelete);
-                await _dbContextClass.SaveChangesAsync();
+                _dbContext.Set<Part>().Remove(partToDelete);
+                await _dbContext.SaveChangesAsync();
             }
         }
     }
