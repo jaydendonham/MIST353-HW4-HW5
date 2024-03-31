@@ -55,7 +55,7 @@ Gets all location details to show the information stored on a searched area.
 
 ### Outputs
 
-Code is written to return the inputs given.
+Code is written to return the inputs given. The intention is for the user to be able to enter either a state, a city, or a zipcode and see the other information returned. For example, enter a zipcode and find out what city or state is associated with it.
 
 ## Occupation
 
@@ -70,7 +70,7 @@ Gets all occupation details to show the information stored on a job.
 
 ### Outputs
 
-Code is written to return the inputs given.
+Code is written to return the inputs given. Look for a position and find out the wages available for it or vice versa.
 
 ## Part
 
