@@ -7,16 +7,11 @@
 <div class="text-center">
     <h1 class="display-4 custom-box">Travel Portal</h1>
     <p>
-        The main purpose of this website is to track the <a asp-area="" asp-page="/SupplyDemand">Supply & Demand</a> of DoorDash drivers across various locations with different climate conditions.
-    </p>
-</div>
-
-<br />
-
-<div class="text-allign: left">
-    <h2>How can analyzing climate data be useful when considering driving occupations?</h2>
-    <p>
-        Climate data can not only indicate the probability of different levels of supply and demand of various geographic locations, but it can also help point towards how profitable drivers can be in those different locations.
+        The main purpose of this website is to act as an all-in-one portal for driving occupations.
+        Whether you wish to find a <a asp-area="" asp-page="/Careers">job as a driver</a>, 
+        check for <a asp-area="" asp-page="/Careers">rest stops</a> in your area, 
+        or even check what the <a asp-area="" asp-page="/Careers">weather</a> will be like wherever you are traveling, 
+        we have you covered!
     </p>
 </div>
 
@@ -25,8 +20,20 @@
 <div class="text-allign: left">
     <h2>How does this site work?</h2>
     <p>
-        A variety of climate data is pulled from various regions along with supply and demand data to show the correlation between climate conditions and a driver's success.
+        A variety of climate data is pulled from various regions along with
+        supply and demand data to show the correlation between climate conditions and a driver's success.
     </p>
+
+<br />
+
+<div class="text-allign: left">
+    <h2>How can analyzing climate data be useful when considering driving occupations?</h2>
+    <p>
+        Climate data can not only indicate the probability of different levels of supply and demand of various geographic locations, 
+        but it can also help point towards how profitable drivers can be in those different locations.
+    </p>
+</div>
+
     <table id="dataTable" class="table-bordered table-striped greentable">
         <thead>
             <tr>
@@ -80,3 +87,14 @@
         </tbody>
     </table>
 </div>
+
+<br />
+
+    <dl>
+        <dt>Cold Climates</dt>
+            <dd>Icy roads and other hazardous driving conditions are more prevalent, causing an increase in people who choose to stay at home.</dd>
+        <dt>Warm Climates</dt>
+            <dd>Levels of business are carried out with little to no change in either supply or demand of drivers.</dd>
+        <dt>Hot Climates</dt>
+            <dd>There is lower demand under these climate conditions as people are generally out and about in hotter weather.</dd>
+    </dl>
