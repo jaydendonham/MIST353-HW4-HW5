@@ -5,6 +5,78 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Travel Portal</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4 custom-box">Travel Portal</h1>
+    <p>
+        The main purpose of this website is to track the <a asp-area="" asp-page="/SupplyDemand">Supply & Demand</a> of DoorDash drivers across various locations with different climate conditions.
+    </p>
+</div>
+
+<br />
+
+<div class="text-allign: left">
+    <h2>How can analyzing climate data be useful when considering driving occupations?</h2>
+    <p>
+        Climate data can not only indicate the probability of different levels of supply and demand of various geographic locations, but it can also help point towards how profitable drivers can be in those different locations.
+    </p>
+</div>
+
+<br />
+
+<div class="text-allign: left">
+    <h2>How does this site work?</h2>
+    <p>
+        A variety of climate data is pulled from various regions along with supply and demand data to show the correlation between climate conditions and a driver's success.
+    </p>
+    <table id="dataTable" class="table-bordered table-striped greentable">
+        <thead>
+            <tr>
+                <th>
+                    Climate
+                </th>
+                <th>
+                    Supply
+                </th>
+                <th>
+                    Demand
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Cold
+                </td>
+                <td>
+                    Low
+                </td>
+                <td>
+                    High
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Warm
+                </td>
+                <td>
+                    Average
+                </td>
+                <td>
+                    Average
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Hot
+                </td>
+                <td>
+                    High
+                </td>
+                <td>
+                    Low
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>
