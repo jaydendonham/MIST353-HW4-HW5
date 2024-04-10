@@ -22,7 +22,7 @@ body {
 }
 
 .custom-box {
-    background-color: darkgray;
+    background-color: #325d88;
     font-size: 65px;
     color: white;
     padding: 15px;
@@ -31,6 +31,9 @@ body {
     font-weight: 500;
 }
 
-.custom-nav {
+.table1 {
+    background-color: #8e8c84;
     color: white;
+    --bs-table-striped-bg: #7a7972;
+    --bs-table-striped-color: white;
 }
