@@ -20,3 +20,17 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.custom-box {
+    background-color: darkgray;
+    font-size: 65px;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    font-weight: 500;
+}
+
+.custom-nav {
+    color: white;
+}
