@@ -10,8 +10,10 @@ builder.Services.AddScoped<IPOIService, POIService>();
 builder.Services.AddScoped<ILocationService, LocationService>();
 builder.Services.AddScoped<IOccupationService, OccupationService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
-builder.Services.AddDbContext<DbContextClass>();
-
+builder.Services.AddDbContext<DbContextClass>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
