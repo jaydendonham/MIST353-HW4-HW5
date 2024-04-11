@@ -1,4 +1,12 @@
 ﻿@page
 @model TravelPortal.Pages.CareersModel
 @{
+    var CareersID = HttpContext.Request.Query["CareersID"];
 }
+<h2 id="CareersName" style="visibility: hidden;"><span></span></h2>
+<div id="CareersAddress" style="visibility: hidden;"></div>
+<div id="CareersContact" style="visibility: hidden;"></div>
+
+<script type="module">
+    displayCareersDetails(@CareersID)
+</script>
