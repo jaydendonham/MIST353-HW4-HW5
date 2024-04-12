@@ -36,4 +36,6 @@ body {
     color: white;
     --bs-table-striped-bg: #7a7972;
     --bs-table-striped-color: white;
+    --bs-table-color: white;
+    --bs-table-bg: #8e8c84;
 }

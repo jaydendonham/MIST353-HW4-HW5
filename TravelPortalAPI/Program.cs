@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using TravelPortalAPI.Data;
 using TravelPortalAPI.Entities;
 using TravelPortalAPI.Repositories;
