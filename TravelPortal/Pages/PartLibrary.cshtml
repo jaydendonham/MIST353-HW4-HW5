@@ -10,6 +10,17 @@
 </h4>
 <p>
     Here you will find trustworthy and reliable vehicle parts for any repair you can possibly need.
+    If you are not sure about your vehicle information, use the button below to go to the Vehicle Information Page.
+    <h3>
+        <p> </p>
+
+    </h3>
+
+    <form action="/Results" method="get">
+
+        <input type="submit" id="submitBtn" value="To Vehicle Information" class="btn btn-primary" />
+    </form>
+</p>
 </p>
 
 <hr />
@@ -59,7 +70,10 @@
 
 <body>
 
-    <p>Start by entering the year, make and model of your vehicle below. Our system will search for all of the parts related to your specific unit. If you are not sure about your vehicle information, use the option below to go to the <a asp-area="" asp-page="/VehicleDetail">Vehicle Information Page.</a>  </p>
+    <p>Start by entering the year, make and model of your vehicle below. Our system will search for all of the parts related to your specific unit. 
+        <br />
+
+
     
 
 </body>
@@ -97,7 +111,7 @@
 
     </h2>
 
-    <form action="/SearchResults" method="get">
+    <form action="/Results" method="get">
 
         <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
     </form>
@@ -265,3 +279,4 @@
 
 </body>
 </html>
+
