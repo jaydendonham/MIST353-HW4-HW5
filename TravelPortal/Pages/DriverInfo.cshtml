@@ -1,8 +1,8 @@
 ﻿@page
 @model TravelPortal.Pages.DriverInfoModel
 @{
-  
-}
+    
+ }  
 
 <h2 class="display-4 custom-box2">Driver Information</h2>
 
@@ -15,5 +15,44 @@
 
     Drivers who haven't found a job yet can also post their information on here for potential employers to view.
 </p>
+
+<h4> Still in need of a job? Go to our Careers page to find the right fit!</h4>
+
+<form action="Careers" method="get">
+
+    <input type="submit" id="submitBtn" value="Careers" class="btn btn-primary" />
+</form>
+
+<h4> Need to enter your information into our database? Enter below!</h4>
+
+<p> Employers and contractors can use our database to find drivers like yourself that fit their needs!</p>
+
+<div class="alert alert-danger">
+    <strong>ATTENTION: </strong> We're Sorry, our Driver Database is currently undergoing maintenance. Check back later :(
+</div>
+
+<form id="driverForm">
+    <label for="DID">DID:</label>
+    <input type="text" id="DID" name="DID" required><br>
+
+    <label for="Position">Position:</label>
+    <input type="text" id="Position" name="Position" required><br>
+
+    <label for="Driver_First">First Name:</label>
+    <input type="text" id="Driver_First" name="Driver_First" required><br>
+
+    <label for="Driver_Last">Last Name:</label>
+    <input type="text" id="Driver_Last" name="Driver_Last" required><br>
+
+    <label for="Hometown">Hometown:</label>
+    <input type="text" id="Hometown" name="Hometown" required><br>
+
+    <label for="DLNum">DLNum:</label>
+    <input type="text" id="DLNum" name="DLNum" required><br>
+
+    <button type="submit">Submit</button>
+</form>
+
+
 
 <hr />
