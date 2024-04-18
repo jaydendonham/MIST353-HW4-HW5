@@ -50,4 +50,8 @@ Page 6 will act similarly to something like Google Maps or MapQuest and show the
 
 This will also incorporate 'POI' in addition to the external API.
 
+# HW5 Documentation
+
+[HW5 ReadMe](TravelPortal/Pages/README.md)
+
 
