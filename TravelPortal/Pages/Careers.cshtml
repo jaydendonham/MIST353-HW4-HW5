@@ -1,13 +1,13 @@
 ﻿@page
 @model TravelPortal.Pages.CareersModel
 @{
-    var CareersID = HttpContext.Request.Query["OccupationID"];
+    var OccupationID = HttpContext.Request.Query["OccupationID"];
 }
 <h2 id="Position" style="visibility: hidden;"><span></span></h2>
 <div id="Wage" style="visibility: hidden;"></div>
 
 <script type="module">
-    displayCareersDetails("@OccupationID")
+    displayOccupationDetails("@OccupationID")
 </script>
 
 <h2 class ="display-4 custom-box2">Careers On The Road</h2>
@@ -31,14 +31,15 @@
 
 <dl>
     <dt>Door Dash</dt>
-    <dd></dd>
-    <dt>Grub Hub</dt>
-    <dd></dd>
+    <dd>As a dasher, you are a contract food delivery driver who works to deliver food from restaurants and stores to customers.</dd>
+    <dt>Fisher Auto Parts Delivery Driver</dt>
+    <dd>Delivery drivers will deliver parts to assigned locations/customers.</dd>
     <dt>Uber</dt>
-    <dd></dd>
+    <dd>An Uber driver's role is getting passengers from point A to point B. Just like a taxi or bus driver, an Uber driver provides 
+        quick, safe rides to customers. </dd>
     <dt>Penske Truck Driver</dt>
-    <dd></dd>
+    <dd>Penske truck drivers transport items from local distribution outlets to retailers or production facilities and returning home daily.</dd>
     <dt>Pizza Hut Delivery Driver</dt>
-    <dd></dd>
-    
+    <dd>Aside from delivering food, you will be responsible for taking inventory, processing paperwork, and maintaining your assigned 
+        delivery vehicle.</dd>
 </dl>
