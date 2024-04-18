@@ -5,6 +5,7 @@ namespace TravelPortalAPI.Entities
 {
     public class Occupation
     {
+        [Key]
         public int OID { get; set; }
 
         [Required]

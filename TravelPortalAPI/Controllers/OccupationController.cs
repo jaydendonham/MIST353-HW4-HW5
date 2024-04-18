@@ -14,10 +14,10 @@ namespace TravelPortalAPI.Controllers
         {
             this.occupationservice = occupation;
         }
-        [HttpGet("{occupationId}/{startDate}/{endDate}")]
-        public async Task<List<Occupation>> GetOccupationDetails(int occupationid, string position, double wage)
+        [HttpGet("{OccupationID}/{Position}/{Wage}")]
+        public async Task<List<Occupation>> GetOccupationDetails(int OccupationID, string Position, double Wage)
         {
-            var OccupationDetails = await occupationservice.GetOccupationDetails(occupationid, position, wage);
+            var OccupationDetails = await occupationservice.GetOccupationDetails(OccupationID, Position, Wage);
             return OccupationDetails;
 
         }

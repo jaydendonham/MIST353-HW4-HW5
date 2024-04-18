@@ -5,21 +5,22 @@ namespace TravelPortalAPI.Entities
 {
     public class Driver
     {
-	public int DID { get; set; }
+		[Key]
+		public int DID { get; set; }
 
-	[Required]
-	public string DPosition { get; set; }
+		[Required]
+		public string DPosition { get; set; }
 
-	[Required]
-	public string D_First { get; set; }
+		[Required]
+		public string D_First { get; set; }
 
-	[Required]
-	public string D_Last { get; set; }
+		[Required]
+		public string D_Last { get; set; }
 	
-	[Required]
-	public string D_Hometown { get; set; }
+		[Required]
+		public string D_Hometown { get; set; }
 	
-	[Required]
-	public string D_LNum { get; set; }
+		[Required]
+		public string D_LNum { get; set; }
     }
 }
