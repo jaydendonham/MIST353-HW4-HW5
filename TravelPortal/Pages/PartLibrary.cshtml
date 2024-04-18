@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model TravelPortal.Pages.PartLibraryModel
 @{
 }
@@ -6,10 +6,261 @@
 <h2 class="display-4 custom-box2">Vehicle Parts You Can Trust</h2>
 
 <h4>
-    If you are in need of repairs, we have you covered!
+    If your vehicle in need of repairs, we have you covered!
 </h4>
 <p>
     Here you will find trustworthy and reliable vehicle parts for any repair you can possibly need.
 </p>
 
 <hr />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Header</title>
+    <style>
+      
+        header {
+           
+            color: #fff;
+            padding: 16px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Alerts</h2>
+        <div class="alert alert-success">
+            <strong>Notice: </strong> All parts are currently in stock. 
+        </div>
+    </div>
+</body>
+</html>
+
+<body>
+    <header>
+        <h1>Part Inventory System</h1>
+      
+    </header>
+
+</body>
+</html>
+
+<body>
+
+    <p>Start by entering the year, make and model of your vehicle below. Our system will search for all of the parts related to your specific unit. If you are not sure about your vehicle information, use the option below to go to the <a asp-area="" asp-page="/VehicleDetail">Vehicle Information Page.</a>  </p>
+    
+
+</body>
+<select name="trvDrop">
+    <option value="1">Select year: </option>
+    <option value="1">2010</option>
+    <option value="2">2011</option>
+    <option value="3">2012</option>
+    <option value="3">2013</option>
+    <option value="3">2014</option>
+    <option value="3">2015</option>
+    <option value="3">2016</option>
+    <option value="3">2017</option>
+    <option value="3">2018</option>
+    <option value="3">2019</option>
+    <option value="3">2020</option>
+    <option value="3">2021</option>
+    <option value="3">2022</option>
+    <option value="3">2023</option>
+    <option value="3">2024</option>
+
+<input type="text" id="locInp" name="location"
+       class="form-control" value="Enter Vehicle Make" />
+
+<input type="text" id="locInp" name="location"
+       class="form-control" value="Enter Vehicle Model" />
+
+
+<input type="text" id="locInp" name="location"
+       class="form-control" value="What city are you located in?" />
+
+    <h2>
+        <p>When finished enrtering vehicle details, click "Search" below to go to the search results. </p>
+
+    </h2>
+
+    <form action="/SearchResults" method="get">
+
+        <input type="submit" id="submitBtn" value="Search" class="btn btn-primary" />
+    </form>
+
+ 
+<h2> 
+    
+</h2>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="MIST353ClassExample.styles.css" asp-append-version="true" />
+        <script>
+            function hideRow() {
+                document.getElementById("tableRow1").style.display = "none";
+                document.getElementById("hidebtn").style.display = "none";
+                document.getElementById("unhidebtn").style.display = "inline";
+            }
+            function unhideRow() {
+                document.getElementById("tableRow1").style.display = "inline";
+                document.getElementById("hidebtn").style.display = "inline";
+                document.getElementById("unhidebtn").style.display = "none";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 class="h1">Our Part Shipping Rates</h1>
+        <h2 style="color:#2200ff;">Rates</h2>
+        <img src="truck.jpg" alt="Shipping Rates" />
+
+        <table class="myTable table">
+            <thead>
+                <tr>
+                    <td>To maintain a readily available stock of all the parts our customers might need, we have parts strategically stocked in many warehouses across the country. Rates are based on distance from Morgantown, WV</td>
+                    <td>Price</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0-50 Miles</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>
+                       51-100 Miles 
+                    </td>
+                    <td>
+                        $30 
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        101-150 Miles
+                    </td>
+                    <td>
+                        $40
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        151-200 Miles
+                    </td>
+                    <td>
+                        $50
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        200-250 Miles
+                    </td>
+                    <td>
+                        $60
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        251-300 Miles
+                    </td>
+                    <td>
+                        $70
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                       301-350 Miles
+                    </td>
+                    <td>
+                        $80
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        351-400 Miles
+                    </td>
+                    <td>
+                        $90
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        401-450 Miles
+                    </td>
+                    <td>
+                        $100
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        451-500 Miles
+                    </td>
+                    <td>
+                        $115
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <table class="myTable myRedTable table-striped">
+            <thead>
+                <tr id="tableRow1">
+
+                    <td>501+ Miles is flat fee of $150</td>
+                    <td></td>
+                </tr>
+            </thead>
+        </table>
+        <button type="button" onclick="hideRow()" id="hidebtn">Hide Row</button>
+        <button type="button" onclick="unhideRow()" id="unhidebtn">Unhide Row</button>
+        <script>
+            document.getElementById("unhidebtn").style.display = "none"
+        </script>
+        <script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Footer</title>
+    <style>
+       
+
+
+        footer {
+         
+            color: #fff;
+            padding: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <footer>
+        <p>&copy; 2024 Travel Portal </p>
+    </footer>
+
+</body>
+</html>
