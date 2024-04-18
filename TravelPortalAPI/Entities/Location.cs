@@ -5,6 +5,7 @@ namespace TravelPortalAPI.Entities
 {
     public class Location
     {
+        [Key]
         public int LID { get; set; }
 
         [Required]
