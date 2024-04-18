@@ -6,12 +6,11 @@
 
 <h2 class="display-4 custom-box2">Our Ultimate Travel Guide</h2>
 
-
 <h4>
     Our map is your ultimate travel companion.
 </h4>
 <p>
-    Whether you wish to check what the weather will be like during your travels, or if you wish to find the best routes to your 
+    Whether you wish to check what the weather will be like during your travels, or if you wish to find the best routes to your
     destination, look no further!
 </p>
 
@@ -27,14 +26,19 @@
 </dl>
 
 
+<select onchange="displayPOIDetails(this.value)">
+    <option value="">Select a state to view a POI there</option>
+    <option value="Illinois">Illinois</option>
+    <option value="Kentucky">Kentucky</option>
+    <option value="California">California</option>
+    <option value="Nebraska">Nebraska</option>
+    <option value="Idaho">Idaho</option>
+</select>
+
+
 <h2 id="POI_Name" style="visibility: hidden;"><span></span></h2>
 <div id="POI_Add_Num" style="visibility: hidden;"></div>
 <div id="POI_Street" style="visibility: hidden;"></div>
 <div id="POI_City" style="visibility: hidden;"></div>
 <div id="POI_State" style="visibility: hidden;"></div>
 <div id="POI_ZIP" style="visibility: hidden;"></div>
-
-<script type="module">
-    displayPOIDetails("@POI_State")
-</script>
-
