@@ -5,10 +5,17 @@
 ### Index (Main)
 
 Jayden Donham
+Index acts as the main home page of the web application.
+
+On this page, users can learn about Travel Portal and what it is all about. This page describes in detail the intended capabilities of our web application and also how it works.
 
 ### Careers
 
 Jayden Donham
+The Careers web page serves to help users find jobs related to driving.
+
+On this page, the Occupation API and the Location API are meant to be used. Occupation is supposed to show available job listings, and Location is meant to show where these listings are available.
+
 
 ### DriverInfo
 
