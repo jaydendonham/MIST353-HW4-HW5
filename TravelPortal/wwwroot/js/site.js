@@ -27,3 +27,4 @@ async function displayPOIDetails(POI_State) {
     document.getElementById('POI_ZIP').style.visibility = "visible";
 }
 
+
