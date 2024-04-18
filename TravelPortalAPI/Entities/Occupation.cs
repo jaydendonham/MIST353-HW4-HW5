@@ -6,7 +6,7 @@ namespace TravelPortalAPI.Entities
     public class Occupation
     {
         [Key]
-        public int OID { get; set; }
+        public int OccupationID { get; set; }
 
         [Required]
         public string Position { get; set; }

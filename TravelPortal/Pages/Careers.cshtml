@@ -1,13 +1,13 @@
 ﻿@page
 @model TravelPortal.Pages.CareersModel
 @{
-    var CareersID = HttpContext.Request.Query["OID"];
+    var CareersID = HttpContext.Request.Query["OccupationID"];
 }
 <h2 id="Position" style="visibility: hidden;"><span></span></h2>
 <div id="Wage" style="visibility: hidden;"></div>
 
 <script type="module">
-    displayCareersDetails("@CareersID")
+    displayCareersDetails("@OccupationID")
 </script>
 
 <h2 class ="display-4 custom-box2">Careers On The Road</h2>

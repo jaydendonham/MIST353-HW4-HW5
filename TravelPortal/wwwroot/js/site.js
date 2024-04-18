@@ -3,8 +3,8 @@
 
 // Write your JavaScript code.
 
-async function displayCareersDetails(CareersID) {
-    const response = await fetch(`https://localhost:7173/api/Careers/${CareersID}`); //web port 7185
+async function displayCareersDetails(OccupationID) {
+    const response = await fetch(`https://localhost:7173/api/Careers/${OccupationID}`); //web port 7185
     const data = await response.json();
     document.getElementById('CareersName').innerHTML = data[0].name;
     document.getElementById('CareersName').style.visibility = "visible";
