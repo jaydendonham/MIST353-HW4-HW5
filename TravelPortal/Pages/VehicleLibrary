@@ -1,0 +1,13 @@
+@page
+@model TravelPortal.Pages.VehicleLibrary
+@{
+}
+
+<h2 class="display-4 custom-box2">Vehicle Information</h2>
+
+<h4>
+    If you need further information about your vehicle details
+</h4>
+<p>
+    Here you will additional information. 
+</p>
