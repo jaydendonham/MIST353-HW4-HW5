@@ -1,3 +1,4 @@
+
 @page
 @model TravelPortal.Pages.Shared.ResultsModel
 @{
@@ -44,4 +45,8 @@
     <input type="text" id="locInp" name="location"
            class="form-control" value="Enter user id associated with the account " />
 
- 
+
+    <form action="/Results" method="get">
+        <input type="submit" id="submitBtn" value="Get my part!" class="btn btn-primary"  />
+    </form>
+
