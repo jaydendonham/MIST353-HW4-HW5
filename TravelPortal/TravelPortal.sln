@@ -7,6 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelPortal", "TravelPorta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelPortalAPI", "..\TravelPortalAPI\TravelPortalAPI.csproj", "{66ADE117-AFEB-4348-8646-6274599C7CEA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{97F7DA3B-A8C7-4D43-98E4-EC0E3C9A0FDF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\ElectricElephantElectronics\DatabaseCreation.sql = ..\..\ElectricElephantElectronics\DatabaseCreation.sql
+		..\..\ElectricElephantElectronics\DatabaseData.sql = ..\..\ElectricElephantElectronics\DatabaseData.sql
+		..\..\ElectricElephantElectronics\JaydenDonhamSPs.sql = ..\..\ElectricElephantElectronics\JaydenDonhamSPs.sql
+		..\..\ElectricElephantElectronics\JoshKellerSPs.sql = ..\..\ElectricElephantElectronics\JoshKellerSPs.sql
+		..\..\ElectricElephantElectronics\RyanSladicSPs.sql = ..\..\ElectricElephantElectronics\RyanSladicSPs.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
