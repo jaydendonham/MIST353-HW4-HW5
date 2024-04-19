@@ -224,6 +224,52 @@ In its current form POI API can be easily changed to be used in different ways.
 
 This page would likely become the "main" part of the app.
 
+ChatGPT was used to help develop the dropdown menu functionality after the API was successfully integrated. Prompt used is:
+
+```
+@page
+@model TravelPortal.Pages.MapModel
+@{
+    var POI_State = HttpContext.Request.Query["POI_State"];
+}
+
+<h2 class="display-4 custom-box2">Our Ultimate Travel Guide</h2>
+
+
+<h4>
+    Our map is your ultimate travel companion.
+</h4>
+<p>
+    Whether you wish to check what the weather will be like during your travels, or if you wish to find the best routes to your 
+    destination, look no further!
+</p>
+
+<p>You can find multiple Points of Interest along your route! Our platform offers support for finding POIs such as:</p>
+
+<dl>
+    <dt>Rest Stops</dt>
+    <dt>Gas Stations</dt>
+    <dt>Major Cities</dt>
+    <dt>National Parks</dt>
+    <dt>Monuments</dt>
+    <dt>...and more!</dt>
+</dl>
+
+
+<h2 id="POI_Name" style="visibility: hidden;"><span></span></h2>
+<div id="POI_Add_Num" style="visibility: hidden;"></div>
+<div id="POI_Street" style="visibility: hidden;"></div>
+<div id="POI_City" style="visibility: hidden;"></div>
+<div id="POI_State" style="visibility: hidden;"></div>
+<div id="POI_ZIP" style="visibility: hidden;"></div>
+
+<script type="module">
+    displayPOIDetails("@POI_State")
+</script>
+
+There's the whole HTML page. Rather than having to go in and manually alter the URL, I'd like to have a drop-down menu go through 5 states, and if a state is selected, it runs displayPOIDetails with the state. The 5 state are Illinois, Kentucky, California, Nebraska, Idaho
+```
+
 ### Part Library
 
 ![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/2bb3fe7b-f713-456a-bb1c-4444eef9c33b)
