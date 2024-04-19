@@ -183,12 +183,16 @@ If a future developement team were to adopt this project, welcome! We hope you c
 
 ### Index (Main)
 
+![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/22211287-0c41-468a-8af2-947fba83d55b)
+
 Jayden Donham
 Index acts as the main home page of the web application.
 
 On this page, users can learn about Travel Portal and what it is all about. This page describes in detail the intended capabilities of our web application and also how it works.
 
 ### Careers
+
+![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/4e5ddf63-5d9a-4c69-aff6-b99e1004511a)
 
 Jayden Donham
 The Careers web page serves to help users find jobs related to driving.
@@ -198,6 +202,8 @@ On this page, the Occupation API and the Location API are meant to be used. Occu
 
 ### DriverInfo
 
+![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/3f7da0ac-a103-45fa-8610-a030f5df6406)
+
 Josh Keller
 Designed to incorporate Driver API. Was unable to as "GET" function proved to be difficult to integrate.
 
@@ -206,6 +212,8 @@ Form is on this page to allow a driver to insert themselves into the database. H
 Eventually a second GET API can be incorporated to show Drivers in the database. Can also be used to show a POST that was just made, giving user confirmation their addition went through. 
 
 ### Map
+
+![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/d8ad1080-8aca-42ec-bea1-4a7db84b121c)
 
 Josh Keller
 Incorporates POI API in an easy-to-migrate drop-down format. Makes it easier to migrate to an actual map, including external API.
@@ -218,13 +226,20 @@ This page would likely become the "main" part of the app.
 
 ### Part Library
 
+![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/2bb3fe7b-f713-456a-bb1c-4444eef9c33b)
+
 Ryan Sladic
 
 ### Vehicle Info
 
+![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/6fd9258a-1aee-4534-8230-2f8b7cfa5410)
+
 Ryan Sladic
 
 ### Registration
+
+![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/d7d1dc88-66e8-42aa-9944-88dfebf21158)
+
 
 Misc. Page
 Josh Keller
