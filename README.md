@@ -18,6 +18,8 @@ The web app currently has six pages planned. The pages are as follows:
 
 All APIs are elaborated upon in the [API Documentation](TravelPortalAPI/README.md)
 
+THIS API DOCUMENTATION IS ALSO PROVIDED LATER IN THIS README FOR GRADING PURPOSES
+
 ### Page 1
 
 Page 1 will serve as a home page for our web application. Basic company information as well as a synopsis regarding the purpose of the site will be on this page. This page will also house a navbar, which may be shared across all pages on the site. This NavBar can assist users with navigation to other pages on the Portal.
@@ -50,8 +52,157 @@ Page 6 will act similarly to something like Google Maps or MapQuest and show the
 
 This will also incorporate 'POI' in addition to the external API.
 
-# HW5 Documentation
+# API Documentation
 
+![image](https://github.com/jaydendonham/MIST353-HW4/assets/142524952/ed693ab7-6896-473b-a302-935855a0af5c)
+
+
+## Driver
+
+### What It Does
+
+Adds a driver to the portal-wide database of employees, whether they work for a company or are freelance.
+
+### Inputs
+
+- DPosition: Position of Driver (ex. Car Hauler)
+- D_First: First Name of Driver (ex. John)
+- D_Last: Last Name of Driver (ex. Doe)
+- D_Hometown: Homeetown of Driver, where they are based (ex. Fairmont)
+- D_LNum: Drivers License Number of Driver (ex. A123456789)
+
+
+### Outputs
+
+Code is written to return the inputs given.
+
+## POI
+
+### What It Does
+
+Finds points of interest in a given state
+
+### Inputs
+
+{poi_state}: State POIs may be in (undecided if they will be a 2-letter code or full name)
+
+### Outputs
+
+- POI_Name: Name of POI (ex. Washington Monument)
+- POI_Add_Num: Address Number of POI (ex. 123)
+- POI_Street: POI Street (ex. Conch St.)
+- POI_City: City of POI (ex. Morgantown)
+- POI_State: State of POI (ex. West Virginia)
+- POI_ZIP: ZIP of POI (ex. 12345)
+
+## Location
+
+### What It Does
+
+Gets all location details to show the information stored on a searched area.
+
+### Inputs
+
+- State
+- City
+- Zipcode
+
+### Outputs
+
+Code is written to return the inputs given. The intention is for the user to be able to enter either a state, a city, or a zipcode and see the other information returned. For example, enter a zipcode and find out what city or state is associated with it.
+
+## Occupation
+
+### What It Does
+
+Gets all occupation details to show the information stored on a job.
+
+### Inputs
+
+- Position
+- Wage
+
+### Outputs
+
+Code is written to return the inputs given. Look for a position and find out the wages available for it or vice versa.
+
+## Part
+
+### What It Does
+Retrieves part information as well as allows user to add/remove parts from the program. 
+### Inputs
+- Part number
+### Outputs
+- Part manufacturer
+- Part category
+- Part country
+- Part price
+- Part description
+  
+## Vehicle
+
+### What It Does
+Retrieves vehicle information using user inputs.
+
+### Inputs
+- Make
+- Model
+- Year
+
+### Outputs
+
+Code is written to return the inputs given.
+
+# MIST353-HW5
 [HW5 ReadMe](TravelPortal/Pages/README.md)
+## Pages
+
+### Index (Main)
+
+Jayden Donham
+Index acts as the main home page of the web application.
+
+On this page, users can learn about Travel Portal and what it is all about. This page describes in detail the intended capabilities of our web application and also how it works.
+
+### Careers
+
+Jayden Donham
+The Careers web page serves to help users find jobs related to driving.
+
+On this page, the Occupation API and the Location API are meant to be used. Occupation is supposed to show available job listings, and Location is meant to show where these listings are available.
+
+
+### DriverInfo
+
+Josh Keller
+Designed to incorporate Driver API. Was unable to as "GET" function proved to be difficult to integrate.
+
+Form is on this page to allow a driver to insert themselves into the database. However, due to the lack of an in-class example of a POST API in javascript in addition to failed attempts to scour the internet and ChatGPT for assistance, API was not able to be implemented as intended. To my knowledge, all other functionality needed (SPs, SQL, etc.) is present.
+
+Eventually a second GET API can be incorporated to show Drivers in the database. Can also be used to show a POST that was just made, giving user confirmation their addition went through. 
+
+### Map
+
+Josh Keller
+Incorporates POI API in an easy-to-migrate drop-down format. Makes it easier to migrate to an actual map, including external API.
+
+Intended to eventaully evolve into an interactable map, like Google Maps or MapQuest. **POI API** is an example of something that can be used alongside the map to add unique functionality. POI is currently in a drop-down format, which while not as streamlined as we eventually intend it to be, is still relatively user-friendly. API is fully usable to my knowledge.
+
+In its current form POI API can be easily changed to be used in different ways.
+
+This page would likely become the "main" part of the app.
+
+### Part Library
+
+Ryan Sladic
+
+### Vehicle Info
+
+Ryan Sladic
+
+### Registration
+
+Misc. Page
+Josh Keller
 
 
