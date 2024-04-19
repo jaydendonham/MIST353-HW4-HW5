@@ -240,6 +240,9 @@ Following the input fields for different vehicle information, there is a table d
 ![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/6fd9258a-1aee-4534-8230-2f8b7cfa5410)
 
 Ryan Sladic
+This page is designed to incorporate the Vehicle API, which will assist the page in getting information about all of the vehicles in the database. 
+
+This page hosts fields for make, model and year of vehicles to use as criteria to find vehicle details. In addition to these data inputs, the page also holds input fields for the user account ID or user hone number that might be matched to vehicles in the database. 
 
 ### Registration
 
