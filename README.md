@@ -229,6 +229,11 @@ This page would likely become the "main" part of the app.
 ![image](https://github.com/jaydendonham/MIST353-HW4-HW5/assets/142524952/2bb3fe7b-f713-456a-bb1c-4444eef9c33b)
 
 Ryan Sladic
+Designed to incorporate Parts API to search the database for a variety of different vehicle parts. 
+
+This page has input fields for vehicle make and vehicle model. Additionally, this page features a drop down menu for selecting the year of the vehicle. This page also features a search button to trigger the get requests to find the data after fields are filled. 
+
+Following the input fields for different vehicle information, there is a table displaying the different shipping rates for the price of parts shipped to the current position. 
 
 ### Vehicle Info
 
