@@ -2,7 +2,7 @@
 
 ## All sections and relevant ReadMes are included in this Readme, including HW4, HW5, and API Documentation
 
-### Deployment Guide
+# Deployment Guide
 
 1. Make sure you have Visual Studio Code and SQL Server Installed
 2. Run SQL Server. Take note of the server name. Click "Connect."
