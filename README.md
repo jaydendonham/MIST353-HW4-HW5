@@ -1,3 +1,22 @@
+# MIST 353 FINAL PROJECT
+
+## All sections and relevant ReadMes are included in this Readme, including HW4, HW5, and API Documentation
+
+### Deployment Guide
+
+1. Make sure you have Visual Studio Code and SQL Server Installed
+2. Run SQL Server. Take note of the server name. Click "Connect."
+3. Run Visual Studio Code. Clone this repo.
+4. Go into File Explorer. Navigate to this repo. Open the SQL folder
+5. In the SQL Folder, open each of these files and execute them in SQL server. Do not open another file without executing. First, open/execute DatabaseCreation, then DatabaseData, then the SPs.
+6. In Visual Studio, right click TravelPortal Solution in Solution Explorer. Click Properties
+7. Select Multiple Startup Projects. In the dropdown menu next to TravelPortal and TravelPortalAPI, click "Start"
+8. Click "Apply"
+9. Go under TravelPortal in Solution explorer, click on "appsettings.json"
+10. Change the DataSource in the DataConnection line to the name of your SQL server
+11. Repeat 9-10 for TravelPortalAPI
+12. The app should now function properly when started via VSS
+
 # MIST353-HW4
 ## Designing a Web App
 
