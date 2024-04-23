@@ -126,16 +126,17 @@ Following our merger into Electric Elephant Electronics, our group is moving for
 
 ## Pages
 
-The web app currently has six pages planned. The pages are as follows:
+The web app currently has seven pages planned. The pages are as follows:
 
 | Page No. | Purpose | API Present? |  API Used | 
 |-----:|-----------|-----------|-----------|
 |     1|Home Page|No| N/A |
 |     2|Driver List|Yes| Driver | 
 |     3|Adding Location/Jobs|Yes| Location & Occupation |
-|     4|Manufacturer/Part Library|Yes| Part & Vehicle |
-|     5|Register for Account|No| N/A |
-|     6|Map|Yes| External Weather API & POI |
+|     4|Manufacturer/Part Library|Yes| Part |
+|     5| Vehicle Information|Yes| Vehicle | 
+|     6|Register for Account|No| N/A |
+|     7|Map|Yes| External Weather API & POI |
 
 All APIs are elaborated upon in the [API Documentation](TravelPortalAPI/README.md)
 
@@ -161,15 +162,21 @@ This will use the APIs 'Location' and 'Occupation'
 
 Page 4 will look somewhat similar to an e-commerce page as it will show different vehicle parts and information regarding that part. Anyone ranging from a freelance driver to a mechanic can use this page to find the parts they need for their vehicle.
 
-This will use the APIs 'Vehicle' and 'Part'
+This will use the API 'Part'
 
 ### Page 5
 
-Page 5 will allow users to make an account or login in order to use the websites services. This is similar to most major web applications as they have some sort of account system in place.
+Page 5 will look similar to a database containing important information related to all vehicles, keeping all the part information for the page 4 Anyone ranging from a driver to a professional int the workforce can use this page to find the complete information on their vehicle. 
+
+This will use the API 'Vehicle'
 
 ### Page 6
 
-Page 6 will act similarly to something like Google Maps or MapQuest and show the relevant climate data for a route shown. This page will incorporate the external climate data API to show drivers about historical climate data along their routes or at certain points of interest.
+Page 6 will allow users to make an account or login in order to use the websites services. This is similar to most major web applications as they have some sort of account system in place.
+
+### Page 7
+
+Page 7 will act similarly to something like Google Maps or MapQuest and show the relevant climate data for a route shown. This page will incorporate the external climate data API to show drivers about historical climate data along their routes or at certain points of interest.
 
 This will also incorporate 'POI' in addition to the external API.
 
